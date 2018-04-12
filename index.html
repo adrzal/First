@@ -7,42 +7,87 @@
      <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    
+    <script>
+    
+        var i=0;
+        var images = [];
+        var time= 4000;
+        
+        images[0] = 'img1.jpeg';
+        images[1] = 'img2.jpeg';
+        images[2] = 'img3.jpeg';
+        
+        function change(){
+            document.slide.src = images[i];
+            
+            if(i < images.length -1){
+            i++;
+        }else{ i = 0;
+             }
+        
+        setTimeout("change()", time);
+        }
+        
+        window.onload = change;
+        
+    </script>
 </head>
 
 <body>
 
     <main>
         <div class="main">
-            <div class="item baner">Szymon Budka</div>
+           
+           
+           
+            <div class="item baner" style="font-family: 'Pacifico', cursive;">Szymon Budka</div>
             <div class="item secend">
-                <div class="asi wspolny"><i class="fas fa-user" style="font-size: 90px; margin-top: 5px;"></i> <p>kim jestem?</p></div>
-                <div class="asi1 wspolny"><i class="fab fa-android" style="font-size: 90px;"></i> <p>co oferuję?</p></div>
-                <div class="asi2 wspolny"><i class="fas fa-graduation-cap" style="font-size: 90px;"></i> <p>curriculum vitae</p></div>
-                <div class="asi3 wspolny"><i class="fas fa-envelope" style="font-size: 90px;"></i><p>kontakt ze mną</p></div>
-                <div class="asi4 wspolny">bigger</div>
+                <div class="asi wspolny"><a href="#kimH"><span style="display: block;"><span class="fas fa-user" style="font-size: 90px; margin-top: 5px;"></span> <p>Kim jestem?</p></span></a></div>
+                
+                <div class="asi1 wspolny" ><a href="#coH"><span style="display: block;"><span class="fab fa-android" style="font-size: 95px;"></span> <p>Co potrafię?</p></span></a></div>
+                
+                <div class="asi2 wspolny"><a href="#cv"><span style="display: block;"><span class="fas fa-graduation-cap" style="font-size: 90px;"></span> <p>Curriculum vitae</p></span></a></div>
+                
+                <div class="asi3 wspolny"><a href="#kon"><span style="display: block;"><span class="fas fa-envelope" style="font-size: 90px;"></span><p>Kontakt ze mną</p></span></a></div>
+                
+                <div class="asi4 wspolny"> <img id="slide" name="slide" width="100" height="40"> </div>
+                
                 <div class="big">
+                   
                     <div class="mini1">
-                        <header>Kim jestem?</header>
+                        <header id="kimH">Kim jestem?</header>
                         <p>
+                           <br>
                             Nazywam się Szymon Budka, studiuję informatykę jestem obecnie na pierwszym roku studiów. 
                             Od sześciu miesięcy progamuję na potrzby pojektów na uczelni oraz hobbistycznie. Jestem osobą otwartą i zawsze gotową na nowe wyzwania, lubie uczyć się nowych rzeczy.
                         </p>
+                        <br><br><br><br>
+                    </div>
+                    
+                    <div class="mini2">
+                        <header id="coH">Co potrafię?</header>
+                        <br>
+                            HTML <div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer"></div><div class="sqwer"></div><div class="sqwer"></div>    <br>
+                            CSS <div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer"></div><div class="sqwer"></div><div class="sqwer"></div><br>
+                            JavaScript <div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer"></div><br>
+                            Bootstrap <div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer"></div><div class="sqwer"></div><br>
+                            Jqwery <div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer"></div><div class="sqwer"></div><br>
+                            Github <div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer less"></div><div class="sqwer"></div><div class="sqwer"></div><div class="sqwer"></div><br>
+                            <br><br><br>
                         
                     </div>
-                    <div class="mini2">
-                        <header>Co oferuję?</header>
-                        <p>
-                            
-                        </p>
-                    </div>
                     <div class="mini3">
-                        <header>Moje CV</header>
+                        <header id="cv">Moje CV</header>
                         <p>
                             
                         </p>
                     </div>
                     <div class="mini4">
-                        <header>kontakt</header>
+                        <header id="kon">Kontakt</header>
                         <p>
                             
                         </p>
@@ -50,10 +95,13 @@
                 </div>
             </div>
             <div class="item parentMedia">
-                <div class="media m1"><i class="fab fa-facebook-f"></i></div>
-                <div class="media m2"><i class="fab fa-codepen"></i></div>
-                <div class="media m3"><i class="fab fa-free-code-camp"></i></div>
-                <div class="media m4"><i class="fab fa-github"></i>
+                <div class="media m1"><a id="facebook" href="https://www.facebook.com/Adrian.Zalewski101" target="_blank"> <span style="display: block;"> <span class="fab fa-facebook-f"></span> </span></a></div>
+                
+                <div class="media m2"><a href="https://codepen.io/SadCat/" target="_blank"><span style="display: block;"><span class="fab fa-codepen"></span></span></a></div>
+                
+                    <div class="media m3"><a href="https://www.freecodecamp.org/fcce490ecfd-bb33-4886-a688-7b1627d43546" target="_blank"><span style="display: block;"><span class="fab fa-free-code-camp"></span></span></a></div>
+                
+                    <div class="media m4"><a href="https://github.com/adrzal" target="_blank"><span style="display: block;"><span class="fab fa-github"></span></span></a>
 
 </div>
             </div>

@@ -3,10 +3,10 @@
     margin: 0;
     padding: 0;
     color: white;
+    
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
     background-color: #636e72;
 }
 
@@ -14,7 +14,6 @@ body {
     font-size: 30px;
     margin: 10px;
     padding-top: 30px;
-    ;
 }
 
 .main {
@@ -24,6 +23,7 @@ body {
     height: 90vh;
     width: 90vw;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .secend {
@@ -80,6 +80,11 @@ footer {
     grid-row: 3/4;
     background-color: #74b9ff;
     margin: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
 }
     
 ::-webkit-scrollbar {
@@ -96,13 +101,21 @@ footer {
     
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: repeat(1,1fr);
+    font-size: 20px;
+    
+    line-height: 50px;
 }
 
 
 #ink {
     height: 100%;
     width: 100%;
+}
+
+#kimH
+{
+    font-size: 60px;
 }
 
 .parentMedia {
@@ -153,7 +166,37 @@ footer {
     background-color: #24292e;
 }
 
-.mini
+#sp{padding-top: 50px;}
+
+.mini2
 {
-    
+    grid-row: 2;
+}
+
+#facebook{width: 100%; height: 100%;}
+
+#slide
+{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+header
+{
+    font-size: 60px;
+}
+
+.sqwer
+{
+    width: 45px;
+    height: 20px;
+    background-color: #b0e563;
+    float: right;
+    margin: 15px 5px 0 5px;
+}
+
+.less
+{
+    background-color: #aaa;
 }

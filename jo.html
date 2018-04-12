@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var my_canvas = document.createElement('canvas');
+        my_canvas.width = 500;
+        my_canvas.height = 500;
+        document.body.appendChild(my_canvas);
+
+        var ctx = my_canvas.getContext('2d');
+
+        var kwadraty = [];
+
+        function rand(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+
+
+        anime();
+
+        function anime() {
+            requestAnimationFrame(anime);
+
+            ctx.fillStyle = 'rgba(255,255,255,0.2)';
+            ctx.fillRect(0, 0, my_canvas.width, my_canvas.height);
+
+            kwadraty.push({
+                x: my_canvas.width / 2,
+                y: my_canvas.height / 2,
+                h: rand(10, 40),
+                r: rand(0, 240),
+                g: rand(0, 240),
+                b: rand(0, 240),
+                SpeedX: rand(-10, 10),
+                SpeedY: rand(-10, 10)
+
+            })
+
+            for (var i = 0; i < kwadraty.length; i++) {
+                var kwadrat = kwadraty[i];
+
+                ctx.fillStyle = 'rgb(' + kwadrat.r + ',' + kwadrat.g + ',' + kwadrat.b + ')';
+                ctx.fillRect(kwadrat.x, kwadrat.y, kwadrat.h, kwadrat.h);
+
+                kwadrat.x += kwadrat.SpeedX;
+                kwadrat.y += kwadrat.SpeedY;
+
+//                console.log("X="+kwadrat.SpeedX);
+//                console.log("Y="+kwadrat.SpeedY);
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
